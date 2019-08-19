@@ -51,7 +51,7 @@ The best is to carefully follow the instructions in the [official document](http
           stable"
   ```
 
-- Install Docker
+- 1.2 Install Docker
 
   1. Install Docker
 
@@ -91,36 +91,36 @@ The best is to carefully follow the instructions in the [official document](http
       $ sudo docker run hello-world
   ```
 
-### 2 Use Docker as a non-root user
+- 1.3 Use Docker as a non-root user
 
   At this point, you need a `sudo` to use docker.  
   This might cause some problems, (and is frustrating to always type in "sudo"),  
   you can set Docker as a non-root user, by some ways.
 
-- method 1
+  - method 1
   
-  Simple  
-  Do not forget to login and out.
+    Simple  
+    Do not forget to login and out.
 
-  ```console
-      $ sudo usermod -aG docker $USER
-  ```
+    ```console
+        $ sudo usermod -aG docker $USER
+    ```
 
-- method 2
+  - method 2
 
-  I have not checked if this works.  
-  A method from [here](https://qiita.com/1000k/items/03a17c49471de881d5c0).  
-  Try this when method 1 does not work.
+    I have not checked if this works.  
+    A method from [here](https://qiita.com/1000k/items/03a17c49471de881d5c0).  
+    Try this when method 1 does not work.
 
-  ```console
-      $ sudo gpasswd -a $(whoami) docker
-      $ sudo chgrp docker /var/run/docker.sock
-      $ sudo service docker restart
-  ```
+    ```console
+        $ sudo gpasswd -a $(whoami) docker
+        $ sudo chgrp docker /var/run/docker.sock
+        $ sudo service docker restart
+    ```
 
-### 3 Install docker-compose
+- 1.4 Install docker-compose
 
-As same as installing Docker, you should follow the [official document](https://docs.docker.com/compose/install/)
+  As same as installing Docker, you should follow the [official document](https://docs.docker.com/compose/install/)
 
   1. Download docker-compose
 
@@ -140,12 +140,12 @@ As same as installing Docker, you should follow the [official document](https://
       $ docker-compose --version
   ```
 
-### 4 Usage
+## 2 Usage
 
 Make files to run Docker and run it.  
 Please learn this by yourself. (Or I might make a different file for this.)
 
-### 5 Issues I got
+## 3 Issues I got
 
 - config.json
 
